@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Back from "../../components/Back";
 import Layout from "../../components/Layout";
 import { useGetJediByIdQuery } from "../../services/StarwarsApi";
 
@@ -14,6 +15,7 @@ export default function JediIdPage() {
 
   return (
     <Layout>
+      <Back url="/jedi" legend="jedis" />
       <div className="page">
         {error ? (
           <>Oh no, there was an error</>

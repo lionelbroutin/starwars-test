@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Back from "../../components/Back";
 import Layout from "../../components/Layout";
 import { useGetFilmsByIdQuery } from "../../services/StarwarsApi";
 
@@ -14,6 +15,7 @@ export default function FilmIdPage() {
 
   return (
     <Layout>
+      <Back url="/films" legend="films" />
       <div className="page">
         {error ? (
           <>Oh no, there was an error</>

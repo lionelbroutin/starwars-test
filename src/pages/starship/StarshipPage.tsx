@@ -4,6 +4,7 @@ import axios from "axios";
 import { JediType, StarshipType } from "../../types";
 import { baseURLAPI } from "./../../lib/config";
 import { Link } from "react-router-dom";
+import StarShipTile from "../../components/tiles/StarShipTile";
 
 type getStarshipResponse = {
   data: {
@@ -39,11 +40,7 @@ export default function JediPage() {
         <div className="wrapper">
           {starships &&
             starships.map((starShip: StarshipType, key: number) => {
-              return (
-                <div key={key}>
-                  <Link to={"/films/" + starShip.name}>{starShip.name}</Link>
-                </div>
-              );
+              return <StarShipTile starship={starShip} />;
             })}
         </div>
       </div>

@@ -196,8 +196,72 @@ a {
   margin-top: 1rem;
 }
 
+hr {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: white;
+  opacity: 0.3;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 .page {
   min-height: 100vh;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 15px;
+  row-gap: 25px;
+}
+
+.tile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: #3b3b3b;
+  border: 2px solid gray;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.tile:hover {
+  background: #474747;
+}
+
+#details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#details .line {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#details .line .title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+#goback {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+#goback a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+#goback a svg {
+  margin-right: 1rem;
 }
 
 footer {

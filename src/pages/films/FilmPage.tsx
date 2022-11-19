@@ -4,6 +4,7 @@ import axios from "axios";
 import { FilmsType } from "../../types";
 import { baseURLAPI } from "./../../lib/config";
 import { Link } from "react-router-dom";
+import FilmTile from "./../../components/tiles/FilmTile";
 
 type getFilmResponse = {
   data: {
@@ -39,11 +40,7 @@ export default function FilmPage() {
         <div className="wrapper">
           {films &&
             films.map((film: FilmsType, key: number) => {
-              return (
-                <div key={key}>
-                  <Link to={"/films/" + film.episode_id}>{film.title}</Link>
-                </div>
-              );
+              return <FilmTile film={film} key={key} />;
             })}
         </div>
       </div>

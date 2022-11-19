@@ -4,6 +4,7 @@ import axios from "axios";
 import { PlanetType } from "../../types";
 import { baseURLAPI } from "./../../lib/config";
 import { Link } from "react-router-dom";
+import PlanetTile from "../../components/tiles/PlanetTile";
 
 type getPlanetResponse = {
   data: {
@@ -39,11 +40,7 @@ export default function JediPage() {
         <div className="wrapper">
           {planets &&
             planets.map((planet: PlanetType, key: number) => {
-              return (
-                <div key={key}>
-                  <Link to={"/planets/" + planet.url}>{planet.name}</Link>
-                </div>
-              );
+              return <PlanetTile planet={planet} />;
             })}
         </div>
       </div>

@@ -4,6 +4,7 @@ import axios from "axios";
 import { VehicleType } from "../../types";
 import { baseURLAPI } from "./../../lib/config";
 import { Link } from "react-router-dom";
+import VehicleTile from "../../components/tiles/VehicleType";
 
 type getVehicleResponse = {
   data: {
@@ -39,11 +40,7 @@ export default function VehcilePage() {
         <div className="wrapper">
           {vehicles &&
             vehicles.map((vehicle: VehicleType, key: number) => {
-              return (
-                <div key={key}>
-                  <Link to={"/films/" + vehicle.name}>{vehicle.name}</Link>
-                </div>
-              );
+              return <VehicleTile vehicle={vehicle} key={key} />;
             })}
         </div>
       </div>

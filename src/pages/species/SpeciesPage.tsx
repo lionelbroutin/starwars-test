@@ -4,6 +4,7 @@ import axios from "axios";
 import { SpeciesType } from "../../types";
 import { baseURLAPI } from "./../../lib/config";
 import { Link } from "react-router-dom";
+import SpeciesTile from "../../components/tiles/SpeciesTile";
 
 type getSpecieType = {
   data: {
@@ -39,11 +40,7 @@ export default function JediPage() {
         <div className="wrapper">
           {species &&
             species.map((specie: SpeciesType, key: number) => {
-              return (
-                <div key={key}>
-                  <Link to={"/planets/" + specie.url}>{specie.name}</Link>
-                </div>
-              );
+              return <SpeciesTile specie={specie} key={key} />;
             })}
         </div>
       </div>

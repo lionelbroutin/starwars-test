@@ -4,6 +4,7 @@ import axios from "axios";
 import { JediType } from "../../types";
 import { baseURLAPI } from "./../../lib/config";
 import { Link } from "react-router-dom";
+import PeopleTile from "../../components/tiles/PeopleTile";
 
 type getFilmResponse = {
   data: {
@@ -39,11 +40,7 @@ export default function JediPage() {
         <div className="wrapper">
           {jedis &&
             jedis.map((jedi: JediType, key: number) => {
-              return (
-                <div key={key}>
-                  <Link to={"/films/" + jedi.name}>{jedi.name}</Link>
-                </div>
-              );
+              return <PeopleTile people={jedi} key={key} />;
             })}
         </div>
       </div>
