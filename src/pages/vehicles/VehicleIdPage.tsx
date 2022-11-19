@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 
-export default function StarShipIdPage() {
+export default function VehicleIdPage() {
   return (
     <Layout>
       <div className="page">

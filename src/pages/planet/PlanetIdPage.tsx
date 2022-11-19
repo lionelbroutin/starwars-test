@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";
 
-export default function PlanetPage() {
+export default function PlanetIdPage() {
   return (
     <Layout>
       <div className="page">

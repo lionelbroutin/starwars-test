@@ -5,7 +5,7 @@ export default function StarShipIdPage() {
   return (
     <Layout>
       <div className="page">
-        <h1>Films Starwars</h1>
+        <h1>Vaisseaux</h1>
       </div>
     </Layout>
   );

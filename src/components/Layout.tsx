@@ -19,7 +19,7 @@ export default function Layout({ children }: PropsType) {
               <Link to="/films">Films</Link>
             </li>
             <li>
-              <Link to="/jedi">Personnages</Link>
+              <Link to="/jedi">Jedis</Link>
             </li>
             <li>
               <Link to="/planets">Planètes</Link>

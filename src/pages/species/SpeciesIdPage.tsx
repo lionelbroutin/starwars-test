@@ -5,7 +5,7 @@ export default function SpeciesIdPage() {
   return (
     <Layout>
       <div className="page">
-        <h1>Films Starwars</h1>
+        <h1>Espèces</h1>
       </div>
     </Layout>
   );

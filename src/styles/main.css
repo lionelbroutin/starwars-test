@@ -134,11 +134,21 @@ table {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans";
+  font-weight: 400;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src: url("./fonts/OpenSans-Bold.ttf") format("ttf"), url("./fonts/OpenSans-Medium.ttf") format("ttf"), url("./fonts/OpenSans-Regular.ttf") format("ttf");
+  font-weight: bold;
+  font-display: swap;
+}
 body {
-  background: black;
+  background: rgb(33, 33, 33);
+  color: rgb(242, 242, 243);
 }
 
 header {
@@ -148,10 +158,53 @@ header {
 }
 header nav {
   margin: auto;
+  width: 90%;
   max-width: 1300px;
 }
 header nav ul {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
+  padding: 15px 0;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+header nav ul li a.active {
+  color: yellow;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+a {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
