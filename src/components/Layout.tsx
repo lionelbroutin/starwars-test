@@ -37,8 +37,6 @@ export default function Layout({ children }: PropsType) {
         </nav>
       </header>
       {children}
-
-      <footer>Réalisé par Lionel Broutin</footer>
     </main>
   );
 }

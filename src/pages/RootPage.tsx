@@ -5,11 +5,7 @@ export default function RootPage() {
   return (
     <Layout>
       <div className="page">
-        <section id="landing">
-          <img src="/" alt="Starwars" id="landing-picture" />
-
-          <div id="peoples"></div>
-        </section>
+        <h1>Bienvenue dans l'univers de StarWars</h1>
       </div>
     </Layout>
   );

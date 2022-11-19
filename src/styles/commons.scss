@@ -81,6 +81,10 @@ hr {
 
 .page {
   min-height: 100vh;
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 4rem;
 }
 
 .wrapper {
@@ -105,6 +109,9 @@ hr {
   border: 2px solid gray;
   box-sizing: border-box;
   padding: 15px;
+  a {
+    text-decoration: none;
+  }
 
   &:hover {
     background: lighten($color-main, 15%);
@@ -117,14 +124,29 @@ hr {
   flex-direction: column;
 
   .line {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 15px;
     justify-content: space-around;
     align-items: center;
+
+    &.list {
+      flex-direction: column;
+
+      .description .list {
+        flex-direction: column;
+      }
+    }
+
     .title {
       font-size: 1.1rem;
       text-transform: uppercase;
     }
-    .description {
+    .description.list {
+      display: flex;
+      a {
+        margin-right: 1rem;
+      }
     }
   }
 }

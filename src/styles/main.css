@@ -208,6 +208,10 @@ hr {
 
 .page {
   min-height: 100vh;
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 4rem;
 }
 
 .wrapper {
@@ -232,6 +236,9 @@ hr {
   box-sizing: border-box;
   padding: 15px;
 }
+.tile a {
+  text-decoration: none;
+}
 .tile:hover {
   background: #474747;
 }
@@ -242,14 +249,29 @@ hr {
   flex-direction: column;
 }
 #details .line {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 15px;
   justify-content: space-around;
   align-items: center;
+}
+#details .line.list {
+  flex-direction: column;
+}
+#details .line.list .description .list {
+  flex-direction: column;
 }
 #details .line .title {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
+#details .line .description.list {
+  display: flex;
+}
+#details .line .description.list a {
+  margin-right: 1rem;
+}
+
 #goback {
   position: absolute;
   top: 50px;
