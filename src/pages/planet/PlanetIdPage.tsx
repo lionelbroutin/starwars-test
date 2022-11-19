@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Layout from "../../components/Layout";
+import { useGetPlanetByIdQuery } from "../../services/StarwarsApi";
 
 export default function PlanetIdPage() {
+  let { id } = useParams();
+
+  const { data, error, isLoading } = useGetPlanetByIdQuery(id ? id.toString() : "1");
+
+  useEffect(() => {
+    console.log(data);
+  }, []);
+
   return (
     <Layout>
       <div className="page">
-        <h1>Films Starwars</h1>
+        {error ? (
+          <>Oh no, there was an error</>
+        ) : isLoading ? (
+          <>Loading...</>
+        ) : data ? (
+          <>
+            <h1>{data?.name}</h1>
+          </>
+        ) : null}
       </div>
     </Layout>
   );

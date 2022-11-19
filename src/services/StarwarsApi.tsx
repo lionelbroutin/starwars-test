@@ -31,4 +31,11 @@ export const starwarsApi = createApi({
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetJediByIdQuery, useGetPlanetByIdQuery, useGetStarshipsByIdQuery } = starwarsApi;
+export const {
+  useGetJediByIdQuery,
+  useGetPlanetByIdQuery,
+  useGetStarshipsByIdQuery,
+  useGetFilmsByIdQuery,
+  useGetVehiculesByIdQuery,
+  useGetSpeciesByIdQuery,
+} = starwarsApi;
